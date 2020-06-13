@@ -150,8 +150,8 @@ class _MyHomePageState extends State<HomeScreen> {
                                     return DropdownMenuItem(
                                       value: priority,
                                       child: Text(
-                                        priority,
-                                        style: TextStyle(color: Color(0xFF222222), fontSize: 18.0),
+                                        priority,overflow: TextOverflow.ellipsis,
+                                        style: TextStyle(color: Color(0xFF222222), fontSize: 16.0),
                                       ),
                                     );
                                   }).toList(),
@@ -161,7 +161,7 @@ class _MyHomePageState extends State<HomeScreen> {
                                       .of(context)
                                       .primaryColor,
                                   iconSize: 20.0,
-                                  style: TextStyle(fontSize: 18.0),
+                                  style: TextStyle(fontSize: 16.0),
                                   decoration: InputDecoration(
                                       labelText: 'Employment Status',
                                       labelStyle: TextStyle(fontSize: 18.0), prefixIcon: Icon(Icons.people)),
@@ -170,7 +170,7 @@ class _MyHomePageState extends State<HomeScreen> {
                                 ),
                               )
                           ),
-                          SizedBox(width: 6.0),
+                          SizedBox(width: 4.0),
                           Expanded(
                               child: Padding(
                                 padding: EdgeInsets.only(bottom: 8.0),
@@ -181,7 +181,7 @@ class _MyHomePageState extends State<HomeScreen> {
                                       value: priority,
                                       child: Text(
                                         priority,
-                                        style: TextStyle(color: Color(0xFF222222), fontSize: 18.0),
+                                        style: TextStyle(color: Color(0xFF222222), fontSize: 16.0),
                                       ),
                                     );
                                   }).toList(),
@@ -190,11 +190,11 @@ class _MyHomePageState extends State<HomeScreen> {
                                   iconEnabledColor: Theme
                                       .of(context)
                                       .primaryColor,
-                                  iconSize: 22.0,
-                                  style: TextStyle(fontSize: 18.0),
+                                  iconSize: 18.0,
+                                  style: TextStyle(fontSize: 16.0),
                                   decoration: InputDecoration(
                                       labelText: 'Marital Status',
-                                      labelStyle: TextStyle(fontSize: 18.0), prefixIcon: _buildPrefixIcon("assets/images/vector_marital_status.svg")),
+                                      labelStyle: TextStyle(fontSize: 16.0), prefixIcon: _buildPrefixIcon("assets/images/vector_marital_status.svg")),
                                   value: "Single",
                                   onChanged: (String value) {},
                                 ),
@@ -233,8 +233,8 @@ class _MyHomePageState extends State<HomeScreen> {
                                   iconEnabledColor: Theme
                                       .of(context)
                                       .primaryColor,
-                                  iconSize: 20.0,
-                                  style: TextStyle(fontSize: 18.0),
+                                  iconSize: 18.0,
+                                  style: TextStyle(fontSize: 16.0),
                                   decoration: InputDecoration(
                                       labelText: 'RelationShip',
                                       labelStyle: TextStyle(fontSize: 18.0), prefixIcon: _buildPrefixIcon("assets/images/vector_relationship.svg")),
@@ -277,7 +277,8 @@ class _MyHomePageState extends State<HomeScreen> {
                           SizedBox(width: 6.0),
                           Text('Your data is secure')
                         ],
-                      )
+                      ),
+                      SizedBox(height: 20.0)
                     ],
                   ),
                 )
